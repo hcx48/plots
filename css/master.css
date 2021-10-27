@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+  --green: #85D291;
+  --text-and-border: #FFF;
+  --creditos: rgba(0, 0, 0, 20);
+}
+
+::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-and-border)
+}
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  border: none; outline: none;
+  color: var(--text-and-border);
+  background: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--green);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+.elements {
+  display: grid;
+  place-items: center;
+}
+.elements .screen {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.elements .screen .description {
+  font-size: 1.10rem;
+}
+.elements .screen .value {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+.inputs input {
+
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 2px solid var(--text-and-border);
+}
+
+.inputs input {
+  max-width: 10rem;
+}
+.inputs input.size-2 {
+  max-width: 8rem;
+}
+.inputs input.size-3 {
+  max-width: 4rem;
+}
+
+.inputs input, button {
+  margin: 0.6rem 0;
+}
+
+#btn-check {
+  background: none;
+}
