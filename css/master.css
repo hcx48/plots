@@ -3,7 +3,6 @@
 :root {
   --green: #85D291;
   --text-and-border: #FFF;
-  --creditos: rgba(0, 0, 0, 20);
 }
 
 ::placeholder {
@@ -55,7 +54,6 @@ body {
   align-items: flex-start;
 }
 .inputs input {
-
   padding: 0.6rem;
   border-radius: 5px;
   border: 2px solid var(--text-and-border);

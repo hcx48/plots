@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Plots</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="assets/logo.svg">
     <link rel="stylesheet" href="css/master.css">
   </head>
@@ -12,13 +12,14 @@
 
       <div class="elements">
         <section class="screen">
-          <p class="description">FICA XX, PARCELAS DE:</p>
-          <span class="value">R$ 100,00</span>
+          <p class="description">FICA XX, COM PARCELAS DE:</p>
+          <span class="value" onclick="clearApp()">R$ 0,00</span>
+          <p class="finalValue"></p>
         </section>
 
         <section class="inputs">
-          <input type="number" placeholder="R$ 1.000,00" id="amount">
-          <input class="size-2" type="number" placeholder="10X PARCELAS" id="installment">
+          <input type="number" placeholder="R$ 0,00" id="amount">
+          <input class="size-2" type="number" placeholder="N° PARCELAS" id="installment">
           <input class="size-3" type="number" placeholder="0%" id="porcentage">
 
           <button id="btn-check" onclick="checkBtn()">
@@ -28,7 +29,6 @@
           </button>
         </section>
       </div>
-
     </div>
 
     <script src="script/main.js"></script>

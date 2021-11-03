@@ -1,4 +1,4 @@
-// JavaScript, first version.
+// JavaScript, second version.
 
 function checkBtn() {
   let amount = document.querySelector('#amount').value;
@@ -6,11 +6,11 @@ function checkBtn() {
   let porcentage = document.querySelector('#porcentage').value;
 
   if (porcentage === '' || amount === '' || installment === '') {
-    alert("Preencha, todos os campos!");
+    alert("VOCÊ NÃO PREENCHEU TODOS OS CAMPOS!");
   }
   else {
 
-    amount = parseInt(amount);
+    amount = parseFloat(amount);
     installment = parseInt(installment);
     porcentage = parseFloat(porcentage) / 100;
 
@@ -18,7 +18,21 @@ function checkBtn() {
 
     algorithm = (algorithm + amount) / installment;
 
-    document.querySelector('.description').innerHTML = `FICA ${installment}X, PARCELAS DE:`;
-    document.querySelector('.value').innerHTML = `R$ ${algorithm.toFixed(2)}`;
+    let decimalPlaces = algorithm.toFixed(2);
+    let replacement = decimalPlaces.replace('.', ',')
+
+    let finalValue = algorithm * installment;
+
+    finalValue = finalValue.toFixed(2);
+
+    let replacementFinalValue = finalValue.replace('.', ',');
+
+    document.querySelector('.description').innerHTML = `FICA ${installment}X, COM PARCELAS DE:`;
+    document.querySelector('.value').innerHTML = `R$ ${replacement}`;
+    document.querySelector('.finalValue').innerHTML = `VALOR FINAL TOTAL: R$ ${replacementFinalValue}`;
   }
+}
+
+function clearApp() {
+  location.reload();
 }
